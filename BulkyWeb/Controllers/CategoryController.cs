@@ -16,5 +16,20 @@ namespace BulkyWeb.Controllers
             //Sending the list to the view to display at frontend
             return View(categories);
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Create(Category category) {
+            if (ModelState.IsValid) {
+                _db.Categories.Add(category);
+                _db.SaveChanges();
+                return RedirectToAction("Index", "Category");
+            }
+            
+            return View();
+        }
     }
 }
