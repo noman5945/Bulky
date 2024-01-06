@@ -3,12 +3,14 @@ using Bulky.DataAccess.Repository;
 using Bulky.Models.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BulkyWeb.Controllers
+namespace BulkyWeb.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-        public CategoryController(IUnitOfWork unitOfWork) { 
+        public CategoryController(IUnitOfWork unitOfWork)
+        {
             _unitOfWork = unitOfWork;
         }
         public IActionResult Index()
@@ -23,27 +25,30 @@ namespace BulkyWeb.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Create(Category category) {
+        public IActionResult Create(Category category)
+        {
 
-            if (category.CategoryName==category.DisplayOrder.ToString()) {
+            if (category.CategoryName == category.DisplayOrder.ToString())
+            {
                 ModelState.AddModelError("CategoryName", "Name and Display order connot be same");
             }
-            if (ModelState.IsValid) {
+            if (ModelState.IsValid)
+            {
                 _unitOfWork.CategoryRepository.Add(category);
                 _unitOfWork.Save();
                 return RedirectToAction("Index", "Category");
             }
-            
+
             return View();
         }
 
         public IActionResult Edit(int? Id)
-        {   
-            if (Id == null || Id==0)
+        {
+            if (Id == null || Id == 0)
             {
                 return NotFound();
             }
-            Category? category = _unitOfWork.CategoryRepository.Get(u=>u.CategoryId == Id);
+            Category? category = _unitOfWork.CategoryRepository.Get(u => u.CategoryId == Id);
             if (category == null)
             {
                 return NotFound("Error");
@@ -74,19 +79,19 @@ namespace BulkyWeb.Controllers
             {
                 return NotFound();
             }
-            Category? category = _unitOfWork.CategoryRepository.Get(u=>u.CategoryId==Id);
+            Category? category = _unitOfWork.CategoryRepository.Get(u => u.CategoryId == Id);
             if (category == null)
             {
                 return NotFound("Error");
             }
             return View(category);
         }
-        [HttpPost,ActionName("Delete")]
+        [HttpPost, ActionName("Delete")]
         public IActionResult DeletePOST(int? Id)
         {
             Category? category = _unitOfWork.CategoryRepository.Get(u => u.CategoryId == Id);
 
-            if (category==null)
+            if (category == null)
             {
                 return NotFound();
             }
@@ -94,7 +99,7 @@ namespace BulkyWeb.Controllers
             _unitOfWork.Save();
             return RedirectToAction("Index", "Category");
 
-            
+
         }
 
     }
