@@ -1,6 +1,7 @@
 ﻿using Bulky.DataAccess.Repository;
 using Bulky.Models.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace BulkyWeb.Areas.Admin.Controllers
 {
@@ -20,6 +21,16 @@ namespace BulkyWeb.Areas.Admin.Controllers
 
         public IActionResult Create()
         {
+            //EF Core Projection-->
+            IEnumerable<SelectListItem> CategoryList = _unitOfWork.CategoryRepository
+                                                                   .GetAll()
+                                                                   .Select(u => new SelectListItem
+                                                                   {
+                                                                       Text = u.CategoryName,
+                                                                       Value= u.CategoryId.ToString(),
+                                                                   }) ;
+            //Sending to the front end using Viewbag
+            ViewBag.CategoryList = CategoryList;
             return View();
         }
         [HttpPost]

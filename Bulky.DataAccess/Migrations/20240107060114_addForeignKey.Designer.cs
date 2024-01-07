@@ -3,16 +3,19 @@ using Bulky.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Bulky.DataAccess.Data
+namespace Bulky.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    partial class ApplicationDBContextModelSnapshot : ModelSnapshot
+    [Migration("20240107060114_addForeignKey")]
+    partial class addForeignKey
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -97,10 +100,6 @@ namespace Bulky.DataAccess.Data
                     b.Property<double>("Price50")
                         .HasColumnType("float");
 
-                    b.Property<string>("ProductImage")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -116,14 +115,13 @@ namespace Bulky.DataAccess.Data
                         {
                             Id = 1,
                             Author = "Billy Spark",
-                            CategoryId = 1,
+                            CategoryId = 3,
                             Description = "Praesent vitae sodales libero. Praesent molestie orci augue, vitae euismod velit sollicitudin ac. Praesent vestibulum facilisis nibh ut ultricies.\r\n\r\nNunc malesuada viverra ipsum sit amet tincidunt. ",
                             ISBN = "SWD9999001",
                             ListPrice = 99.0,
                             Price = 90.0,
                             Price100 = 80.0,
                             Price50 = 85.0,
-                            ProductImage = "",
                             Title = "Fortune of Time"
                         },
                         new
@@ -137,7 +135,6 @@ namespace Bulky.DataAccess.Data
                             Price = 30.0,
                             Price100 = 20.0,
                             Price50 = 25.0,
-                            ProductImage = "",
                             Title = "Dark Skies"
                         },
                         new
@@ -151,7 +148,6 @@ namespace Bulky.DataAccess.Data
                             Price = 50.0,
                             Price100 = 35.0,
                             Price50 = 40.0,
-                            ProductImage = "",
                             Title = "Vanish in the Sunset"
                         },
                         new
@@ -165,7 +161,6 @@ namespace Bulky.DataAccess.Data
                             Price = 65.0,
                             Price100 = 55.0,
                             Price50 = 60.0,
-                            ProductImage = "",
                             Title = "Cotton Candy"
                         },
                         new
@@ -179,7 +174,6 @@ namespace Bulky.DataAccess.Data
                             Price = 27.0,
                             Price100 = 20.0,
                             Price50 = 25.0,
-                            ProductImage = "",
                             Title = "Rock in the Ocean"
                         },
                         new
@@ -193,7 +187,6 @@ namespace Bulky.DataAccess.Data
                             Price = 23.0,
                             Price100 = 20.0,
                             Price50 = 22.0,
-                            ProductImage = "",
                             Title = "Leaves and Wonders"
                         });
                 });
