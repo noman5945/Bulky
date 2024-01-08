@@ -10,3 +10,4 @@ E:\Bulky\Bulky\Bulky.Models\obj\Debug\net8.0\Bulky.Models.dll
 E:\Bulky\Bulky\Bulky.Models\obj\Debug\net8.0\refint\Bulky.Models.dll
 E:\Bulky\Bulky\Bulky.Models\obj\Debug\net8.0\Bulky.Models.pdb
 E:\Bulky\Bulky\Bulky.Models\obj\Debug\net8.0\ref\Bulky.Models.dll
+E:\Bulky\Bulky\Bulky.Models\obj\Debug\net8.0\Bulky.Models.csproj.AssemblyReference.cache

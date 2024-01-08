@@ -259,3 +259,6 @@ E:\Bulky\Bulky\BulkyWeb\bin\Debug\net8.0\Bulky.Utils.dll
 E:\Bulky\Bulky\BulkyWeb\bin\Debug\net8.0\Bulky.DataAccess.pdb
 E:\Bulky\Bulky\BulkyWeb\bin\Debug\net8.0\Bulky.Models.pdb
 E:\Bulky\Bulky\BulkyWeb\bin\Debug\net8.0\Bulky.Utils.pdb
+E:\Bulky\Bulky\BulkyWeb\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+E:\Bulky\Bulky\BulkyWeb\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+E:\Bulky\Bulky\BulkyWeb\obj\Debug\net8.0\BulkyWeb.MvcApplicationPartsAssemblyInfo.cs
