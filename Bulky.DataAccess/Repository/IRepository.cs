@@ -11,8 +11,8 @@ namespace Bulky.DataAccess.Repository
     public interface IRepository<T> where T : class
     {
         //T-Category or any class model
-        T Get(Expression<Func<T,bool>> filter);
-        IEnumerable<T> GetAll();
+        T Get(Expression<Func<T,bool>> filter, string? includeProperties = null);
+        IEnumerable<T> GetAll(string? includeProperties = null);
         void Add(T Entity);
         void Remove(T Entity);
         void RemoveRange(IEnumerable<T> Entities);

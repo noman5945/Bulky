@@ -18,7 +18,7 @@ namespace BulkyWeb.Areas.Admin.Controllers
         }
         public IActionResult Index()
         {
-            List<Product> products = _unitOfWork.ProductRepository.GetAll().ToList();
+            List<Product> products = _unitOfWork.ProductRepository.GetAll(includeProperties:"Category").ToList();
             return View(products);
         }
 
@@ -68,13 +68,34 @@ namespace BulkyWeb.Areas.Admin.Controllers
                 {
                     string fileName=Guid.NewGuid().ToString()+Path.GetExtension(file.FileName);
                     string productPath=Path.Combine(wwwRoot,@"Images\Products");//creating filename and adding to path
+
+                    if (!string.IsNullOrEmpty(vm.Product.ProductImage)) 
+                    {
+                        //get old image path
+                        var oldImgPath=Path.Combine(wwwRoot,vm.Product.ProductImage.TrimStart('\\'));
+                        if (System.IO.File.Exists(oldImgPath)) 
+                        {
+                            //delete the image
+                            System.IO.File.Delete(oldImgPath);
+                        }
+
+                    }
                     using (var fileStream = new FileStream(Path.Combine(productPath,fileName),FileMode.Create)) 
                     {
                         file.CopyTo(fileStream);//coping file to the folder
                     }
                     vm.Product.ProductImage = @"Images\Products\" + fileName;
                 }
-                _unitOfWork.ProductRepository.Add(vm.Product);
+                if (vm.Product.Id == 0)
+                {
+                    //Add the new product
+                    _unitOfWork.ProductRepository.Add(vm.Product);
+                }
+                else 
+                {
+                    //Update the product
+                    _unitOfWork.ProductRepository.UpdateProduct(vm.Product);
+                }
                 _unitOfWork.Save();
                 return RedirectToAction("Index", "Product");
             }

@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\BulkyWeb.bundle.scp.css"
     },
     {
+      "Id": "E:\\Bulky\\Bulky\\BulkyWeb\\wwwroot\\Images\\Products\\85a55bf9-a8de-4296-a3cf-8f0926bd739d.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\85a55bf9-a8de-4296-a3cf-8f0926bd739d.jpg"
+    },
+    {
+      "Id": "E:\\Bulky\\Bulky\\BulkyWeb\\wwwroot\\Images\\Products\\abf2d5de-3206-42bd-86b8-c7e44a3e2cd4.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\abf2d5de-3206-42bd-86b8-c7e44a3e2cd4.jpg"
+    },
+    {
+      "Id": "E:\\Bulky\\Bulky\\BulkyWeb\\wwwroot\\Images\\Products\\d98988e9-08a5-47bd-8f1b-c57ffc22610a.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\d98988e9-08a5-47bd-8f1b-c57ffc22610a.jpg"
+    },
+    {
       "Id": "E:\\Bulky\\Bulky\\BulkyWeb\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

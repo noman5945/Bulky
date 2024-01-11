@@ -7,6 +7,7 @@
             <hr />
         </div>
         <input asp-for="Product.Id" hidden />
+        <input asp-for="Product.ProductImage" hidden />
         <div class="mb-3 row p-1">
             <label asp-for="Product.Title" class="p-0"></label>
             <input asp-for="Product.Title" type="text" class="form-control" />
@@ -61,7 +62,7 @@
         </div>
         <div class="row">
             <div class="col-6">
-                <button type="submit" class="btn btn-primary form-control">Create</button>
+                <button type="submit" class="btn btn-primary form-control">@(Model.Product.Id != 0 ? "Update" : "Create")</button>
             </div>
             <div class="col-6">
                 <a asp-controller="Product" asp-action="Index" class="btn btn-secondary border form-control">
