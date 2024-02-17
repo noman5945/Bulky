@@ -5,16 +5,40 @@
       "PackagePath": "staticwebassets\\BulkyWeb.bundle.scp.css"
     },
     {
+      "Id": "E:\\Bulky\\Bulky\\BulkyWeb\\wwwroot\\Images\\Products\\61c7e175-98a6-45e9-858d-d24842929c02.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\61c7e175-98a6-45e9-858d-d24842929c02.jpg"
+    },
+    {
+      "Id": "E:\\Bulky\\Bulky\\BulkyWeb\\wwwroot\\Images\\Products\\7dd4ce8d-cdb5-4455-9be7-86de63656b5b.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\7dd4ce8d-cdb5-4455-9be7-86de63656b5b.jpg"
+    },
+    {
       "Id": "E:\\Bulky\\Bulky\\BulkyWeb\\wwwroot\\Images\\Products\\85a55bf9-a8de-4296-a3cf-8f0926bd739d.jpg",
       "PackagePath": "staticwebassets\\Images\\Products\\85a55bf9-a8de-4296-a3cf-8f0926bd739d.jpg"
+    },
+    {
+      "Id": "E:\\Bulky\\Bulky\\BulkyWeb\\wwwroot\\Images\\Products\\949b840d-8cfe-48d6-8312-35add3ecf53c.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\949b840d-8cfe-48d6-8312-35add3ecf53c.jpg"
+    },
+    {
+      "Id": "E:\\Bulky\\Bulky\\BulkyWeb\\wwwroot\\Images\\Products\\a04baced-2754-4694-90eb-24507017cc75.png",
+      "PackagePath": "staticwebassets\\Images\\Products\\a04baced-2754-4694-90eb-24507017cc75.png"
     },
     {
       "Id": "E:\\Bulky\\Bulky\\BulkyWeb\\wwwroot\\Images\\Products\\abf2d5de-3206-42bd-86b8-c7e44a3e2cd4.jpg",
       "PackagePath": "staticwebassets\\Images\\Products\\abf2d5de-3206-42bd-86b8-c7e44a3e2cd4.jpg"
     },
     {
+      "Id": "E:\\Bulky\\Bulky\\BulkyWeb\\wwwroot\\Images\\Products\\c5c498f9-8fde-454d-b870-012dbf6a3fbf.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\c5c498f9-8fde-454d-b870-012dbf6a3fbf.jpg"
+    },
+    {
       "Id": "E:\\Bulky\\Bulky\\BulkyWeb\\wwwroot\\Images\\Products\\d98988e9-08a5-47bd-8f1b-c57ffc22610a.jpg",
       "PackagePath": "staticwebassets\\Images\\Products\\d98988e9-08a5-47bd-8f1b-c57ffc22610a.jpg"
+    },
+    {
+      "Id": "E:\\Bulky\\Bulky\\BulkyWeb\\wwwroot\\Images\\Products\\ef4ce45c-7959-43d4-acea-8ec64a27825f.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\ef4ce45c-7959-43d4-acea-8ec64a27825f.jpg"
     },
     {
       "Id": "E:\\Bulky\\Bulky\\BulkyWeb\\wwwroot\\css\\site.css",
@@ -23,6 +47,10 @@
     {
       "Id": "E:\\Bulky\\Bulky\\BulkyWeb\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\Bulky\\Bulky\\BulkyWeb\\wwwroot\\js\\Product.js",
+      "PackagePath": "staticwebassets\\js\\Product.js"
     },
     {
       "Id": "E:\\Bulky\\Bulky\\BulkyWeb\\wwwroot\\js\\site.js",

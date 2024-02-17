@@ -1,0 +1,66 @@
+<!--
+id="tblData"
+<tbody>
+    @foreach (var obj in Model)
+    {
+        <tr>
+            <td>@obj.Title</td>
+            <td>@obj.ISBN</td>
+            <td>@obj.Price</td>
+            <td>@obj.Category.CategoryName</td>
+            <td>
+                <div class="w-75 btn-group">
+                    <a asp-controller="Product" asp-action="Upsert" asp-route-Id="@obj.Id" class="btn btn-info mx-2">
+                        <i class="bi bi-pencil-square"></i>Edit
+                    </a>
+                    <a asp-controller="Product" asp-action="Delete" asp-route-Id="@obj.Id" class="btn btn-danger mx-2">
+                        <i class="bi bi-trash"></i>Delete
+                    </a>
+                </div>
+            </td>
+        </tr>
+    }
+</tbody>
+-->
+
+
+Ajax---------------------------------
+{
+    data: 'Id',
+    "render": function (data) {
+        return `<div class="w-75 btn-group">
+                <a href='/admin/product/upsert?id=${data}' class="btn btn-info mx-2">
+                    <i class="bi bi-pencil-square"></i>Edit
+                </a>
+                <a href='/admin/product/delete?id=${data}' class="btn btn-danger mx-2">
+                    <i class="bi bi-trash"></i>Delete
+                </a>
+            </div>`
+    },
+    "width":"25%"
+}
+
+
+
+ "render": function (data) {
+     return `<div class="w-75 btn-group">
+             <a href='/admin/product/upsert?id=${data}' class="btn btn-info mx-2">
+                 <i class="bi bi-pencil-square"></i>Edit
+             </a>
+             <a href='/admin/product/delete?id=${data}' class="btn btn-danger mx-2">
+                 <i class="bi bi-trash"></i>Delete
+             </a>
+         </div>`
+ },
+
+
+
+ url: '/Admin/Product/GetAll',
+            error: function (response) {
+                alert(response+"Nega")
+                
+            },
+            success: function (response) {
+                alert(response)
+            },
+            dataType: 'json',
